@@ -200,7 +200,7 @@ std::string GenUnderlyingCast(const FieldDef &field, bool from,
   } else if (field.value.type.base_type == BASE_TYPE_BOOL) {
     return from
       ? val + " != 0"
-      : "if " + val + " { 0u8 } else { 1u8 }";
+      : "if " + val + " { 1u8 } else { 0u8 }";
   } else {
     return val;
   }
